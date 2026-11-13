@@ -1,0 +1,49 @@
+<!--Esta es la vista principal que une todo: incluye el header, recorre el arreglo promociones, recorre el arreglo productos llamando al parcial productCard, y cierra con el footer-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo — Artículos de Limpieza</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <%- include('../partials/header') %>
+
+  <main class="contenedor">
+    
+    <!-- SECCIÓN DE PROMOCIONES -->
+    <section id="promociones" class="seccion">
+      <h2>🔥 Promociones Destacadas</h2>
+      <div class="grilla-promos">
+        <% for (const promo of promociones) { %>
+          <div class="tarjeta-promo">
+            <span class="etiqueta-descuento"><%= promo.descuento %></span>
+            <h3><%= promo.titulo %></h3>
+            <p><%= promo.descripcion %></p>
+            <p class="precio-promo">$<%= promo.precio %></p>
+          </div>
+        <% } %>
+      </div>
+    </section>
+
+    <hr class="separador">
+
+    <!-- SECCIÓN DEL CATÁLOGO -->
+    <section id="catalogo" class="seccion">
+      <h2>🧴 Nuestros Productos</h2>
+      <div class="grilla-productos">
+        <% for (const producto of productos) { %>
+          <%- include('../partials/productCard', { producto }) %>
+        <% } %>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include('../partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* Reset básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave al tocar los enlaces del menú */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+  line-height: 1.5;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Encabezado */
+
+.encabezado {
+  background-color: #0277bd;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.encabezado h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.navegacion {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navegacion a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.navegacion a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Secciones */
+.seccion {
+  margin-bottom: 2.5rem;
+}
+
+.seccion h2 {
+  margin-bottom: 1.2rem;
+  color: #01579b;
+  font-size: 1.5rem;
+}
+
+.separador {
+  border: none;
+  border-top: 1px solid #dce4ec;
+  margin: 2.5rem 0;
+}
+
+/* Grilla y Tarjetas de Promociones */
+.grilla-promos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta-promo {
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+  border-left: 5px solid #ff8f00;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.etiqueta-descuento {
+  display: inline-block;
+  background-color: #ff6f00;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+}
+
+.tarjeta-promo h3 {
+  margin-bottom: 0.4rem;
+  color: #4e342e;
+}
+
+.precio-promo {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #e65100;
+}
+
+/* Grilla y Tarjetas de Productos */
+.grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta-producto {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover; /* Recorta la foto prolijamente sin deformarla */
+  background-color: #e0e0e0;
+}
+
+.producto-info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.producto-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.descripcion {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.precio {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0277bd;
+  margin-bottom: 0.6rem;
+}
+
+/* Etiquetas de Stock */
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.disponible {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.agotado {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Pie de página */
+.pie-pagina {
+  background-color: #263238;
+  color: #cfd8dc;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
